@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #00FF7F!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+}
+.header{
+    animation: animetop 6s linear infinite;
+    animation-delay: -3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2VkZGluZyUyMGNvdXBsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80);
+}
+.header>h1{
+    font-weight: 400;
+    font-size: 64px;
+    color: #fff;
+}
+.header>p{
+    margin: 20px 0 20px 0;
+    color: #fff;
+    font-size: 30px;
+}
+.content-1{
+    
+  margin-top: 64px;
+    width: 80%;
+    .img-1{
+        width: 100%;
+        filter: grayscale(0.75);
+    }
+    .para-1{
+        margin-top: 50px;
+        margin-bottom: 15px;
+        font-style: italic;
+        line-height: 2;
+       text-align: justify;
+    }
+} 
+.button{
+        padding: 15px 20px 15px 20px;
+        background-color: black;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: capitalize;
+        margin: 50px auto;
+        border-radius: 5px;
+    }
+    .button:hover{
+        background-color:#757575 ;
+        color: black;
+    }
+.content-1>h2{
+    color: #757575!important;;
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.box>h2{
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+}
+.box .span{
+     margin-top: 30px;
+    text-align: center;
+}
+.footer{
+    margin-top: 80px;
+    width: 100%;
+}
+.footer-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdddd!important;
+    color: black;
+    padding: 64px 20px;
+}
+.footer-1>h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+.footer-1>p{
+    letter-spacing: 5px;
+    font-weight: 400;
+    padding: 20px;
+}
+.footer-1>a{
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 20px 60px 20px 60px;
+    background-color: violet;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.footer-2{
+    background-color: black;
+    color: #fff;
+    font-size: 500;
+    padding: 30px;
+    text-align: center;
+}
+.menu{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+}
+.list
+{
+    overflow: hidden;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #fff;
+    opacity: 0.75;
+    text-align: center;
+}
+.list>a{
+    float: left;
+    outline: none;
+    border: none;
+    display: block;
+    padding: 8px 16px;
+        text-decoration: none;
+        color: black;
+}
+.list>a:hover{
+    background-color: aqua;
+}
+@keyframes animetop {
+    0%{
+        transform:scale(0.7)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
