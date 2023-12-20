@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="file">
+    <form action="">
+        <label for="location">Location:</label>
+        <input type="text" id="location"><br><br>
+        
+        <label for="radiation">Radiation:</label>
+        <input type="text" id="radiation"><br><br>
+        
+        <label for="date">Result:</label>
+        <input type="text" id="date" readonly><br><br>
+        
+        <input type="submit" id="submitBtn" value="Submit">
+    </form>
+
+    <script>
+        let locationInput = document.getElementById("location");
+        let radiationInput = document.getElementById("radiation");
+        let dateInput = document.getElementById("date");
+        let submitBtn = document.getElementById("submitBtn");
+
+        submitBtn.onclick = function() {
+            let a = parseFloat(locationInput.value);
+            let b = parseFloat(radiationInput.value);
+            let d = a/b;
+            dateInput.value = d;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách truyện</title>
+    <link rel="stylesheet" href="./font/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="./assests/css/index.css">
+    <style>
+        .large-font {
+            font-size: 20px; /* Kích thước chữ khi áp dụng lớp 'large-font' */
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <nav class="story-nav" >
+        <ul>
+            <li style="width: 100%;"><i class="fa-solid fa-list"></i> Danh sách truyện
+                <ul style="width: 50%;">
+                    <li class="list-1" onclick="loadStory('tamcam.txt')">Tấm cám</li>
+                    <li class="list-1" onclick="loadStory('truyenkieu.txt')">Truyện kiều</li>
+                    <li class="list-1" onclick="loadStory('truyenma.txt')">Truyện ma</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="read" style="height: 100vh; margin-top: 50px; padding: 30px;">
+        <iframe id="storyFrame" sandbox="allow-same-origin" seamless style="font-size: 16px;  font-family: 'Times New Roman', Times, serif;"></iframe>
+         <pre id="storyContent"></pre>
+         <button onclick="readText()" style="padding: 10px;">Đọc</button>
+    </div>
+    <script>
+        function loadStory(filename) {
+            var storyFrame = document.getElementById('storyFrame');
+            if (storyFrame) {
+                storyFrame.src = 'about:blank';
+
+                storyFrame.src = `./assests/read_story/${filename}`;
+                storyFrame.onload = function() {
+                    if (storyFrame.contentDocument && storyFrame.contentDocument.body) {
+                        storyFrame.contentDocument.body.classList.add('large-font');
+                    }
+                };
+            }
+        }
+
+        function readText() {
+            var storyContent = document.getElementById('storyFrame').innerHTML;
+
+            // Sử dụng Web Speech API để phát âm thanh
+            var speechSynthesis = window.speechSynthesis;
+            var speechUtterance = new SpeechSynthesisUtterance(storyContent);
+            
+            // (Tùy chọn) Cấu hình giọng đọc và các tùy chọn khác
+            // speechUtterance.lang = 'en-US';
+            // speechUtterance.rate = 1.0;
+
+            speechSynthesis.speak(speechUtterance);
+        }
+    </script>
+</body>
+</html>

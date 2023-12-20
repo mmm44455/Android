@@ -1,0 +1,73 @@
+/* Reset các giá trị mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Định dạng thanh nav */
+.story-nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+.large-font {
+    font-size: 20px; /* Kích thước chữ khi áp dụng lớp 'large-font' */
+    font-family: 'Times New Roman', Times, serif;
+}
+.story-nav ul {
+    list-style-type: none;
+}
+
+.story-nav ul li {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+}
+
+.story-nav ul li i {
+    margin-right: 5px;
+}
+
+.story-nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #555;
+}
+
+.story-nav ul li:hover > ul {
+    display: block;
+}
+
+.story-nav ul ul li {
+    display: block;
+}
+.story-nav ul ul li:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+.story-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Đảm bảo thanh nav hiển thị trên cả nền trang */
+}
+
+.read {
+    margin-top: 50px; /* Để tránh bị che phủ bởi thanh nav */
+}
+#storyFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden; /* Ẩn thanh trượt của iframe */
+}
